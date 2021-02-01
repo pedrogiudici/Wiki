@@ -1,0 +1,31 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Create New Page
+{% endblock %}
+{%block style%}
+<style>
+    #save{
+        display: block;
+        margin-top: 5px;
+    }
+    #id_title{
+        display: block;
+    }
+    textarea{
+        display: block;
+    }
+</style>
+{%endblock%}
+{% block body %}
+    <h1>Create New Page</h1>
+    <form action="{%url 'add'%}" method="post" autocomplete="off">
+        {% csrf_token %}
+        {{form}}
+        {%if form != 'There is already a page with that title'%}
+        <input type="submit" value="Save" id="save">
+        {%else%}
+        <input type="submit" value="Back" id="save">
+        {%endif%}
+    </form>
+{% endblock %}

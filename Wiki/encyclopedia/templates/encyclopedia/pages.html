@@ -1,0 +1,16 @@
+{% extends "encyclopedia/layout.html" %}
+{%load markdownify%}
+
+{% block title %}
+    {{pagetitle}}
+{% endblock %}
+
+{% block body %}
+{{page|markdownify }}
+{%if pagetitle != 'Error' %}
+<form action="{%url 'edit'%}" method="GET" autocomplete="off">
+    <input type="hidden" name="e" value="{{pagetitle}}">
+    <input type="submit" value='Edit Page'>
+</form>
+{%endif%}
+{% endblock %}
