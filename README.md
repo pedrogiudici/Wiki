@@ -4,6 +4,11 @@ Segundo exercício do curso CS50’s Web Programming with Python and JavaScript
 
 Se trata de uma enciclopédia online semelhante a Wikipédia, onde pode-se pesquisar sobre determinados assuntos presentes, criar novos ou editar os antigos, escritos em Markdown.
 
+Exercício feito com Django. Use esse código para rodar o sistema em seu computador:
+
+'''
+python manage.py runserver
+'''
 ## Vídeo no Youtube
 
 Neste pequeno [vídeo](https://youtu.be/cw_s9EIXOcU) é demonstrado o uso do site em todas as suas funcionalidades
